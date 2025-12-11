@@ -402,7 +402,7 @@ private:
     json << "\"totalMinedCoins\":" << blockchain_.getTotalMinedCoins() << ",";
     json << "\"miningLimit\":3000000,";
     json << "\"preminedCoins\":2000000,";
-    json << "\"preminedAccount\":\"Shankar-Lal-Khati\",";
+    json << "\"preminedAccount\":\"FOUNDER_WALLET\",";
     json << "\"minimumPrice\":600000,";
     json << "\"shards\":2048,";
     json << "\"status\":\"running\"";

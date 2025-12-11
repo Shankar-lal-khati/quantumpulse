@@ -235,7 +235,7 @@ private:
     }
 
     // Default: check if premined account
-    if (address == "Shankar-Lal-Khati" && power == 0) {
+    if (address == "FOUNDER_WALLET" && power == 0) {
       power = 2000000; // Premined amount
     }
 

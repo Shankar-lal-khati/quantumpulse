@@ -161,7 +161,7 @@ TEST(BlockchainInit) {
 TEST(PreminedAccountBalance) {
   QuantumPulse::Blockchain::Blockchain bc;
 
-  auto balance = bc.getBalance("Shankar-Lal-Khati", "any_token");
+  auto balance = bc.getBalance("FOUNDER_WALLET", "any_token");
   EXPECT_TRUE(balance.has_value());
   EXPECT_EQ(*balance, 2000000.0);
 }

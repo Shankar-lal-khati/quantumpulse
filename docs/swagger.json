@@ -232,7 +232,7 @@
                     },
                     "preminedAccount": {
                         "type": "string",
-                        "example": "Shankar-Lal-Khati"
+                        "example": "FOUNDER_WALLET"
                     },
                     "minimumPrice": {
                         "type": "integer",

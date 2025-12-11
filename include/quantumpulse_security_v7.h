@@ -37,7 +37,7 @@ public:
       return false;
 
     // Must start with pub_v11_ or be a known premined account
-    if (address == "Shankar-Lal-Khati")
+    if (address == "FOUNDER_WALLET")
       return true;
 
     static const std::regex addressPattern("^pub_v11_[a-zA-Z0-9]{10,64}$");

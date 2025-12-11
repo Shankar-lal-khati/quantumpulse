@@ -25,7 +25,7 @@ void printBlockchainInfo(QuantumPulse::Blockchain::Blockchain &blockchain) {
   std::cout << "Total Mined Coins: " << blockchain.getTotalMinedCoins()
             << " QP\n";
   std::cout << "Mining Limit: 3,000,000 QP\n";
-  std::cout << "Premined Coins: 2,000,000 QP (Shankar-Lal-Khati)\n";
+  std::cout << "Premined Coins: 2,000,000 QP (FOUNDER_WALLET)\n";
   std::cout << "Minimum Coin Price: $600,000 USD\n";
   std::cout << "Total Coins: 5,000,000 QP\n";
   std::cout << "Shards: 2048\n";

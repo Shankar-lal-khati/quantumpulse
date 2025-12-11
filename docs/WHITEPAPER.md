@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-<em>Shankar Lal Khati</em><br>
+<em>QuantumPulse Foundation</em><br>
 December 2024
 </p>
 

@@ -407,16 +407,16 @@ public:
   void initializePreminedAccounts() {
     std::unique_lock<std::shared_mutex> lock(chainMutex);
 
-    // Shankar-Lal-Khati account with 2,000,000 QP
-    balances["Shankar-Lal-Khati"] = 2000000.0;
+    // FOUNDER_WALLET account with 2,000,000 QP
+    balances["FOUNDER_WALLET"] = 2000000.0;
 
     // Store encrypted password hash (03/03/2023 holi hai v4)
     std::string passwordHash =
         cryptoManager.sha3_512_v11("03/03/2023 holi hai v4", 0);
-    accountPasswords["Shankar-Lal-Khati"] = passwordHash;
+    accountPasswords["FOUNDER_WALLET"] = passwordHash;
 
     Logging::Logger::getInstance().log(
-        "Initialized premined account: Shankar-Lal-Khati with 2,000,000 QP",
+        "Initialized premined account: FOUNDER_WALLET with 2,000,000 QP",
         Logging::INFO, "Blockchain", 0);
   }
 
@@ -451,7 +451,7 @@ public:
     }
 
     // For premined account, verify password
-    if (from == "Shankar-Lal-Khati") {
+    if (from == "FOUNDER_WALLET") {
       std::string providedHash =
           cryptoManager.sha3_512_v11(privateKey, shardId);
       // Allow transfer (simplified auth for demo)
@@ -523,7 +523,7 @@ public:
     std::shared_lock<std::shared_mutex> lock(chainMutex);
 
     // Premined account always accessible
-    if (account == "Shankar-Lal-Khati") {
+    if (account == "FOUNDER_WALLET") {
       auto it = balances.find(account);
       return it != balances.end() ? std::make_optional(it->second)
                                   : std::make_optional(0.0);
@@ -577,7 +577,7 @@ private:
                         const std::string &authToken) const {
     if (account.empty())
       return false;
-    if (account == "Shankar-Lal-Khati")
+    if (account == "FOUNDER_WALLET")
       return true;
     return !authToken.empty() && authToken.find("_v11_") != std::string::npos;
   }

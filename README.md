@@ -268,7 +268,7 @@ MIT License - See [LICENSE](LICENSE) for details.
 
 ## 🙏 Credits
 
-Created by **Shankar Lal Khati**
+Created by **QuantumPulse Foundation**
 
 QuantumPulse v7.0 - Quantum-Resistant Cryptocurrency
 

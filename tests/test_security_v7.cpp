@@ -13,7 +13,7 @@ void testInputValidation() {
 
   // Valid addresses
   assert(InputValidator::isValidAddress("pub_v11_abc123xyz789") == true);
-  assert(InputValidator::isValidAddress("Shankar-Lal-Khati") == true);
+  assert(InputValidator::isValidAddress("FOUNDER_WALLET") == true);
 
   // Invalid addresses
   assert(InputValidator::isValidAddress("") == false);

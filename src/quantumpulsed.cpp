@@ -131,7 +131,7 @@ private:
     }
 
     if (method == "getbalance") {
-      auto balance = g_blockchain->getBalance("Shankar-Lal-Khati", "");
+      auto balance = g_blockchain->getBalance("FOUNDER_WALLET", "");
       double bal = balance.value_or(0.0);
       return R"({"result": )" + std::to_string(bal) +
              R"(, "error": null, "id": 1})";
@@ -218,18 +218,18 @@ private:
     }
 
     if (method == "listtransactions") {
-      return R"({"result": [{"txid": "genesis_premine", "address": "Shankar-Lal-Khati", "amount": 2000000, "category": "receive"}], "error": null, "id": 1})";
+      return R"({"result": [{"txid": "genesis_premine", "address": "FOUNDER_WALLET", "amount": 2000000, "category": "receive"}], "error": null, "id": 1})";
     }
 
     if (method == "getwalletinfo") {
-      auto balance = g_blockchain->getBalance("Shankar-Lal-Khati", "");
+      auto balance = g_blockchain->getBalance("FOUNDER_WALLET", "");
       double bal = balance.value_or(0.0);
       return R"({"result": {"balance": )" + std::to_string(bal) +
              R"(, "min_price_usd": 600000}, "error": null, "id": 1})";
     }
 
     if (method == "getpreminedinfo") {
-      return R"({"result": {"account": "Shankar-Lal-Khati", "premined": 2000000, "min_price_usd": 600000}, "error": null, "id": 1})";
+      return R"({"result": {"account": "FOUNDER_WALLET", "premined": 2000000, "min_price_usd": 600000}, "error": null, "id": 1})";
     }
 
     return R"({"result": null, "error": {"code": -32601, "message": "Method not found"}, "id": 1})";
@@ -394,8 +394,8 @@ int main(int argc, char *argv[]) {
   std::cout << "[quantumpulsed] Blockchain loaded. Height: "
             << g_blockchain->getChainLength() << std::endl;
 
-  auto balance = g_blockchain->getBalance("Shankar-Lal-Khati", "");
-  std::cout << "[quantumpulsed] Pre-mined balance (Shankar-Lal-Khati): "
+  auto balance = g_blockchain->getBalance("FOUNDER_WALLET", "");
+  std::cout << "[quantumpulsed] Pre-mined balance (FOUNDER_WALLET): "
             << balance.value_or(0.0) << " QP" << std::endl;
   std::cout << "[quantumpulsed] Minimum price: $600,000 USD" << std::endl;
   std::cout << "[quantumpulsed] Mining limit: 3,000,000 QP" << std::endl;

@@ -165,7 +165,7 @@ private:
     UTXOutput genesis;
     genesis.txid = "genesis_coinbase_000000000000000000000000000000000000";
     genesis.vout = 0;
-    genesis.address = "Shankar-Lal-Khati";
+    genesis.address = "FOUNDER_WALLET";
     genesis.amount = 2000000.0; // 2 million pre-mined
     genesis.scriptPubKey =
         "OP_DUP OP_HASH160 <pubKeyHash> OP_EQUALVERIFY OP_CHECKSIG";
